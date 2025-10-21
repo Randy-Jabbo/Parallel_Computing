@@ -1,3 +1,4 @@
+# library management program
 import os
 
 
@@ -267,7 +268,7 @@ class Fantasy_Book(Book):
 
 
 
-def main():
+def main(): # a short demonstration of the program
     library = instansiate()
 
     print("Total:", library[0].Num_Books())
