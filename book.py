@@ -11,12 +11,12 @@ class Book:
         self.price = price
         self.availability = availability
     
-    def Num_Books(self):
+    def Num_Books(self): # return total number of book managed by library
         with open("books.txt", "r") as file:
             lines = file.readlines()
             return len(lines)
 
-    def Num_Available(self):
+    def Num_Available(self): # return total number of books available
         with open("books.txt", "r") as file: 
             count = 0
             for line in file:
@@ -25,7 +25,7 @@ class Book:
                     count += 1
             return count   
 
-    def Update_Availability(self, new_availability):
+    def Update_Availability(self, new_availability): # change the availablility of a book
         self.availability = new_availability
         
         with open("books.txt", "r") as file:
